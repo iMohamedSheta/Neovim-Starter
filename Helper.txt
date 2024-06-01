@@ -1,0 +1,4 @@
+If you are using Windows this is NeoVim config which include all the packages and Lazy package manager you need to start 
+
+Windows => put it in the path C:\Users\%USER%\AppData\Local\neovim like C:\Users\Mohamed Sheta\AppData\Local\neovim
+Linux => put in in .config folder in home/%USER%/.config/ like \\wsl.localhost\Ubuntu\home\mohamedsheta\.config\neovim
