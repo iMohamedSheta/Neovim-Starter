@@ -9,7 +9,7 @@ apt update
 echo " Starting installing Neovim..."
 
 # Install prerequisites
-sudo apt-get install ninja-build gettext cmake curl build-essential
+apt-get install ninja-build gettext cmake curl build-essential
 
 # clone repo
 git clone https://github.com/neovim/neovim
@@ -17,14 +17,16 @@ git clone https://github.com/neovim/neovim
 # build and install
 cd neovim
 make CMAKE_BUILD_TYPE=Release
-sudo make install
+make install
 
 cd ~
 
 # clone .config 
-git clone https://github.com/iMohamedSheta/Neovim-Starter.git neovim_config_mohamed_sheta
+git clone https://github.com/iMohamedSheta/Neovim-Starter.git neovim_config_imohamed_sheta
 
-cp -r neovim_config_mohamed_sheta/nvim/ .config/nvim/
+# copy configs
+
+cp -r neovim_config_imohamed_sheta/nvim/ .config/nvim/
 
 
 echo "Neovim Installed successfully ✅"
