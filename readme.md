@@ -1,8 +1,18 @@
-If you are using Windows this is NeoVim config which include all the packages and Lazy package manager you need to start 
+# Neovim Starter Guide
 
-Windows => put it in the path C:\Users\%USER%\AppData\Local\neovim like C:\Users\Mohamed Sheta\AppData\Local\neovim
-Linux => put in in .config folder in home/%USER%/.config/ like \\wsl.localhost\Ubuntu\home\mohamedsheta\.config\nvim
+If you are using Windows, this Neovim config includes all the packages and the Lazy package manager you need to start.
 
+## Installation Instructions
+
+### Windows
+Place the configuration in the path `C:\Users\%USER%\AppData\Local\neovim` like `C:\Users\Mohamed Sheta\AppData\Local\neovim`.
+
+### Linux
+Place the configuration in the `.config` folder in `home/%USER%/.config/` like `\\wsl.localhost\Ubuntu\home\mohamedsheta\.config\nvim`.
+
+### Installation Script
+
+```bash
 #!/usr/bin/bash
 apt update 
 
@@ -25,8 +35,6 @@ cd ~
 git clone https://github.com/iMohamedSheta/Neovim-Starter.git neovim_config_imohamed_sheta
 
 # copy configs
-
 cp -r neovim_config_imohamed_sheta/nvim/ .config/nvim/
-
 
 echo "Neovim Installed successfully ✅"
