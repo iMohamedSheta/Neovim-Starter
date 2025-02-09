@@ -1,4 +1,30 @@
 If you are using Windows this is NeoVim config which include all the packages and Lazy package manager you need to start 
 
 Windows => put it in the path C:\Users\%USER%\AppData\Local\neovim like C:\Users\Mohamed Sheta\AppData\Local\neovim
-Linux => put in in .config folder in home/%USER%/.config/ like \\wsl.localhost\Ubuntu\home\mohamedsheta\.config\neovim
+Linux => put in in .config folder in home/%USER%/.config/ like \\wsl.localhost\Ubuntu\home\mohamedsheta\.config\nvim
+
+#!/usr/bin/bash
+apt update 
+
+echo " Starting installing Neovim..."
+
+# Install prerequisites
+sudo apt-get install ninja-build gettext cmake curl build-essential
+
+# clone repo
+git clone https://github.com/neovim/neovim
+
+# build and install
+cd neovim
+make CMAKE_BUILD_TYPE=Release
+sudo make install
+
+cd ~
+
+# clone .config 
+git clone https://github.com/iMohamedSheta/Neovim-Starter.git neovim_config_mohamed_sheta
+
+cp -r neovim_config_mohamed_sheta/nvim/ .config/nvim/
+
+
+echo "Neovim Installed successfully ✅"
